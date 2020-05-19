@@ -1,0 +1,467 @@
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+*, *:before, *:after {
+	margin: 0; 
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+	background: #689CD2;
+	color: #fff;
+	font-family: Helvetica;
+}
+
+.header__section{
+	display: flex;
+	align-items: center; 
+}
+
+.header-item{
+padding: 10px 15px;
+font-size: 20px;
+margin-left: 20px;
+}
+
+
+.header-item:hover{
+	background-color: #ff9900;
+	border-radius: 4px;
+}
+
+.headerLogo{
+	font-weight: bold;
+	border-bottom: 1px solid #fff;
+	font-size: 22px;
+	font-style: italic;
+}
+
+.headerButton{
+	cursor: pointer;
+}
+
+.sideBar a{
+	color: #689CD2;
+}
+.sideBar{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 630px;
+	width: 150px;
+	border-right: 1px solid #D7DBDD;
+	background-color: #FCFDFD
+	padding: 10px;
+}
+
+.sideBar-item{
+	cursor: pointer;
+	padding: 8px 10px;
+	font-size: 18px;
+}
+
+.sideBar-item:hover{
+	background-color: #EEF3F5;
+	border-radius: 4px;
+}
+
+main{
+	display: flex;
+	min-width: 0; /*это свойство нужно указывать Flex-элементу, в котором содержится слайдер*/
+}
+
+html{
+	background: #333;
+	height: auto;
+	font-family: 'Seymour One', sans-serif;
+}
+
+h1{
+	text-align: center;
+	color: #fff;
+	margin-bottom: 15px;
+}
+
+
+.gallery div{
+	flex: auto;
+	width: 250px;
+	margin: .5vw;	
+}
+
+.gallery div img {
+	width: 100%;
+	height: auto;	
+}
+
+@media screen and (max-width: 600px) {
+	.gallery div {margin:0;}
+	.gallery {padding: 0;}
+}
+
+.gallery:hover img {
+opacity: 0.3;
+transition: 0.3s opacity;
+}
+
+.gallery:hover img:hover {
+opacity: 1;
+transition: 0.3s opacity;
+}
+
+
+.slider img {
+	width: 100%;
+	height: 500px;
+}
+
+
+.wrapper h1 @font-face {
+font-family: Seymour;
+src: url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&family=Seymour+One&display=swap">)
+}
+
+.wrapper{
+height: 100%;
+padding: 50px;
+min-width: 0; 
+}
+
+.slider {
+	min-width: 0;
+    margin: auto;
+}
+
+.slider__item {
+	min-width: 0;
+}
+	/* Слайдер */
+}
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+
+.slick-list {
+	overflow: hidden;
+}
+
+/* Лента слайдов */
+.slick-track{
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{}
+/* Слайд основной */
+.slick-slide.slick-current{}
+/* Слайд по центру */
+.slick-slide.slick-center{}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{}
+/* Стрелка влево */
+.slick-arrow.slick-prev{}
+/* Стрелка вправо */
+.slick-arrow.slick-next{}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{}
+
+
+/*Конкретный слайдер*/
+
+.slider {
+	position: relative;
+	padding: 0 50px;
+}
+
+
+.slider .slick-arrow{
+	position: absolute;
+	top: 50%;
+	margin-top:-25px;
+	z-index: 2;
+	font-size: 0;
+	width: 30px;
+	height: 50px;
+}
+
+/*Значения стиля ниже, становятся активны когда отключена "бесконечность" слайдера*. 
+Т.е. когда Jquery присваивает значение "slick-disabled"*/
+.slider .slick-arrow.slick-disabled{ 
+opacity: .2;
+}
+
+.slider .slick-arrow.slick-prev{
+left:0;
+background: url(../img/Left_arrow.png) 0 0 / 100% no-repeat;
+z-index:3;
+}
+
+.slider .slick-arrow.slick-next{
+right:0;
+background: url(../img/Right_arrow.png) 0 0 / 100% no-repeat;
+z-index:3;
+}
+
+.slider .slick-dots{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slider .slick-dots li{
+	list-style: none;
+	margin: 20px;
+}
+/* Активная точка */
+.slider .slick-dots li.slick-active button{
+ 	font-size: 0;
+	height: 10px;
+	width: 10px;
+	background-color: #fff;;
+	border-radius: 50%;
+	border: 2px solid #fff;
+}
+
+/* Элемент точки */
+.slider .slick-dots li button{
+	font-size: 0;
+	height: 10px;
+	width: 10px;
+	background-color: transparent; 
+	border-radius: 50%;
+	border: 2px solid #fff;
+}
+
+
+.slider__item{
+text-align: center;
+}
+
+.gallery {
+	padding: .5vw; /*5% от ширины окна*/
+	font-size: 0;
+	flex-wrap: wrap;
+	flex-direction: column;
+	flex-flow: row wrap;	
+	display: flex;
+}
+
+.card-header img {
+	max-width: 100%;
+}
+
+body {
+	font-size: 17px;
+	line-height: 1.4;
+}
+
+.container {
+	max-width: 1100px;
+	margin: auto;
+}
+
+.cards{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	padding: 1.5%;
+}
+
+.card{
+	position: relative;
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+	background: #fefff9;
+	color: #363636;
+	text-decoration: none;
+	box-shadow: rgba(0,0,0,0.19) 0 0 8px 0;
+	border-radius: 5px;
+}
+
+@media (max-width: 600px){
+	.card{width: 100%;}
+}
+
+@media (min-width: 700px){
+	.card{
+		max-width: 320px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.card span {
+	display: block;
+}
+
+.card .card-summary {
+	padding: 5% 5% 3% 5%;	
+}
+
+.card-header {
+	position: relative;
+	height: 175px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-color: rgba(255, 255, 255, 0.15);
+	background-blend-mode: overlay;
+	border-radius: 4px 4px 0 0;
+}
+
+.card .card-header:hover, .card .card-header:focus{
+	background-color: rgba(255, 255, 255, 0.85);
+}
+
+.card .card-title {
+	background: rgba(104, 156, 210, 0.85);
+	padding: 3.5% 0 2.5% 0;
+	color: white;
+	text-transform: uppercase;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.card .card-title h3 {
+	font-size: 1.2em;
+	line-height: 1.2;
+	padding: 0 3.5%;
+	margin: 0;
+}
+
+.card .card-meta {
+max-height: 0;
+overflow: hidden;
+color: #666;
+font-size: 0.78em;
+text-transform: uppercase;
+position: absolute;
+bottom: 5%;
+padding: 0 5%;
+transition-property: all;
+transition-duration: 0.4s;
+transition-timing-function: ease-in-out;
+}
+
+.card:hover, .card:focus{
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+}
+
+.card:hover .card-title, .card:focus .card-title {
+	background-color: rgba(154, 156, 210, 0.95) 0px 0px 20px 0px;
+}
+
+.card:hover .card-meta, .card:focus .card-meta {
+	max-height: 1em;
+}
+
+
+.form-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+h2 {
+	text-align: center;
+}
+
+form {
+flex-basis: 70vh;
+padding: 2em;
+background: #fff;
+box-shadow: 0 0 2em rgba(0, 0, 0, 0.2);
+border-radius: 0.25em;
+}
+
+input {
+	padding: 0.5em;
+	font-size: 0.78em;
+	background: #f4f4f4;
+	border: 1px solid #ccc;
+	border-width: 1px 1px 1px 0;
+	border-radius: 0;
+}
+
+input:focus {
+	background: #fff;
+	box-shadow: inset 0.1em 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.2)
+	outline: 0;
+}
+
+.form-field {
+	margin-bottom: 1em;
+	display: flex;
+}
+
+.form-field label{
+	flex: 0 1 4em;
+	padding: 1em;
+	background: #fff;
+	border: 1px solid #ccc;
+	font-size: 0.75em;
+	text-align: center;
+	box-shadow: 0 1px 0 #fff;
+	line-height: 1;
+	border-radius: 0.25em 0 0 0.25em;
+}
+
+.form-field input {
+flex-grow: 1;
+}
+
+.input-right input, .multi-input input:last-child{
+	border-radius: 0 0.25em 0.25em 0;
+}
+
+.submit-field {
+	flex-direction: row;
+	justify-content: center;
+}
+
+
+input[type="submit"]{
+
+	flex-wrap: 0 1 40%;
+	padding: 0.8em;
+	font-size: 1.2rem;
+	text-shadow: 0 1px 0 #fff;
+	background: #689CD2;
+	border-radius: 0.25em;
+	border: 0;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover {
+color: #fff;
+}	
